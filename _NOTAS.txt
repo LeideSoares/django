@@ -1,0 +1,180 @@
+PassWord: 
+
+================================================================================================
+======== PREPARACAO do AMBIENTE ================================================================
+================================================================================================
+- Python
+- Criar virtualenv 	--> conda create -n name_of_the_virtualenv
+- Pip
+- Django 		--> pip install django
+- Pycharm
+
+################################################################################################
+==> activate virtual_environment_name
+==> deactivate virtual_environment_name
+
+==> django-admin startproject project_name
+==> django-admin startproject controle_gastos .     --> este ponto altera a localizacao da pasta que devia estar dentro projectcom identico
+
+django-fundamentos
+
+======>			<==========================
+======>     BASIC 	<==========================
+======> 		<==========================
+1. deactivate
+2. cd C\path...
+3. conda create -n virtual_environment_name -->	MUST create inside of the folders (of the application) 
+4. activate virtual_environment_name
+5. pip install django
+6. django-admin startproject project_name . -->	DOT (ponto) evitar criacao de pasta dentro de projecto como nome
+
+7. python manage.py startapp APP_NAME
+	7.1 register APP_NAME in settings  --> INSTALLED_APPS -> ad APP_NAME,
+
+8. python manage.py migrate 		   --> installed database SQLITE3 (we can change to other of our taste, Postgres, MySQL, Oracle, etc)
+9. python manage.py runserver              --> runser the website first time
+10. python manage.py createsuperuser       --> Password de administrador Web
+	username: 	lsoares				paloma
+	email:		l.manuel.s.soaes@gmail.com	lurdes.l.paloma@gmail.com
+	password:	Lm19ssLei1fac			lurd32paloma
+
+----> settings (add app_name to INSTALLED_APPS)
+----> views (what to show, function, def, requestins app_name webpage)
+----> urls (path to add on https + path function in views; for example, path-> "home", funct ->home)
+
+	MODELS.py - create table in Database, etc; then do these
+11. python manage.py makemigrations
+12. python manage.py migrate
+
+	ADMIN.py - to register the apps, e.g. below
+13. from .models import Categoria 
+14. admin.site.register(Categoria)
+
+################################################################################################
+
+======== WEB DEV DJANGO ========================================================================
+- Python
+- Django
+- Pip
+- Pycharm
+environment location: C:\Users\lmanu\Anaconda3\envs\udemyDjangoFundamentos
+environment location: C:\Users\lmanu\Anaconda3\envs\myenv
+
+
+
+======= ENVIRONMENT - CONDA ====================================================================
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+$ conda create -n udemyDjangoFundamentos
+
+
+------- Created Environment -------------------------------------
+$ conda create -n udemyDjangoFundamentos
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.8.3
+  latest version: 4.9.2
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+    ______ Location Environment __________
+    environment location: C:\Users\lmanu\Anaconda3\envs\udemyDjangoFundamentos
+
+
+
+    Proceed ([y]/n)? y
+
+    Preparing transaction: ...working... done
+    Verifying transaction: ...working... done
+    Executing transaction: ...working... done
+    #
+    # To activate this environment, use
+    #
+    #     $ conda activate udemyDjangoFundamentos
+    #
+    # To deactivate an active environment, use
+    #
+    #     $ conda deactivate
+
+
+    ______ Remove Environment __________
+    https://www.youtube.com/watch?v=ARDXj9kizTA&ab_channel=FluidicColours
+
+    conda remove --name Virtual_Environment_Name --all
+    conda remove --name myenv --all
+
+    ------- List Environment Existent -------------------------------------
+    conda info --envs
+
+
+------- ACTIVATE ENVIRONMENT -------------------------------------
+activate udemyDjangoFundamentos
+
+==> pip #is  activated together
+
+
+------- INSTALL DJANGO -------------------------------------
+pip install django
+
+
+------- List Environment Existent -------------------------------------
+------- List Environment Existent -------------------------------------
+
+
+
+
+tar -xzf file_name.tar.g  --> para descompactar na linha de comando
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+…or create a new repository on the command line
+echo "# django" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:LeideSoares/django.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin git@github.com:LeideSoares/django.git
+git branch -M main
+git push -u origin main
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+
+
+
+def foo(required, *args, **kwargs):
+	print(required)
+	if args:
+		print(args)
+	if kwargs:
+		print(kwargs)
+
+foo()
+foo('hello')
+foo('hello', 1, 2, 3, 4, 5, 6)
+foo('hello', 1, 2, 3, 4, 5, 6, key1='value', key2=9999)
